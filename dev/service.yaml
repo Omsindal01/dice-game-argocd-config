@@ -1,12 +1,11 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: myapp-service
+  name: dice-game-service
 spec:
   selector:
-    app: myapp
+    app: dice-game
   ports:
-  - port: 8080
-    protocol: TCP
-    targetPort: 8080
-  
+    - port: 8080
+      protocol: TCP
+      targetPort: 8080

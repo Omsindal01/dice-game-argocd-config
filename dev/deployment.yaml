@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: myapp
+  name: dice-game
 spec:
   selector:
     matchLabels:
-      app: myapp
+      app: dice-game
   replicas: 2
   template:
     metadata:
       labels:
-        app: myapp
+        app: dice-game
     spec:
       containers:
-      - name: myapp
-        image: nanajanashia/argocd-app:1.2
-        ports:
-        - containerPort: 8080
+        - name: dice-game
+          image: sindal01/dice-game-1.0
+          ports:
+            - containerPort: 8080
